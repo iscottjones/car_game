@@ -1,0 +1,37 @@
+command = ""
+car = ""
+
+
+while command != "crash":
+    command = input("> ").lower()
+    if command == "stop" and car != "stopped":
+        print("Car stopped..")
+        car = "stopped"
+    elif command == "stop" and car == "stopped":
+        print("Engine is not running")
+    elif command == "start" and car != "started":
+        print("Car started..")
+        car = "started"
+    elif command == "start" and car == "started":
+        print("The engine is already running..")
+  #  elif command == "print":
+   #     print(car)
+    elif command == "ready":
+        print("""
+3
+2
+1
+GO!""")
+    elif command == "help":
+        print("""
+>'start' to start the car
+>'stop' to stop the car
+>'ready' to start the race
+>'crash' to end race
+        """)
+    elif command == "quit" or command == "crash":
+        print("The game has ended. Reopen to start again")
+        break
+    else:
+        print("Invalid command")
+
